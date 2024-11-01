@@ -9,6 +9,10 @@ import tensorflow_datasets as tfds
 import sys
 from LIBERO_10.conversion_utils import MultiThreadedDatasetBuilder
 
+"""
+tfds build --overwrite --data_dir /mnt/arc/yygx/pkgs_baselines/openvla/datasets/
+"""
+
 
 def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
     """Yields episodes for list of data paths."""
