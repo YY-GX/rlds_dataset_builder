@@ -7,7 +7,7 @@ import numpy as np
 import tensorflow as tf
 import tensorflow_datasets as tfds
 import sys
-from LIBERO_10.conversion_utils import MultiThreadedDatasetBuilder
+from conversion_utils import MultiThreadedDatasetBuilder
 
 """
 tfds build --overwrite --data_dir /mnt/arc/yygx/pkgs_baselines/openvla/datasets/
