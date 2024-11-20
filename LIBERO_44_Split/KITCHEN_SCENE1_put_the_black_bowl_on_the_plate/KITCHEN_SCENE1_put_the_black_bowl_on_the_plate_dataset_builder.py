@@ -86,7 +86,7 @@ def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
             yield ret
 
 
-class kitchenScene10CloseTheTopDrawerOfTheCabinetDatasetBuilder(MultiThreadedDatasetBuilder):
+class kitchenScene1PutTheBlackBowlOnThePlate(MultiThreadedDatasetBuilder):
     """DatasetBuilder for example dataset."""
 
     VERSION = tfds.core.Version('1.0.0')
@@ -168,5 +168,5 @@ class kitchenScene10CloseTheTopDrawerOfTheCabinetDatasetBuilder(MultiThreadedDat
         """Define filepaths for data splits."""
         return {
             # "train": glob.glob("/PATH/TO/LIBERO/libero/datasets/libero_10_no_noops/*.hdf5"),
-            "train": glob.glob("/mnt/arc/yygx/pkgs_baselines/LIBERO/libero/datasets/libero_90_openvla_no_noops/KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_demo.hdf5"),
+            "train": glob.glob("/mnt/arc/yygx/pkgs_baselines/LIBERO/libero/datasets/libero_90_openvla_no_noops/KITCHEN_SCENE1_put_the_black_bowl_on_the_plate_demo.hdf5"),
         }
