@@ -10,7 +10,7 @@ import sys
 from conversion_utils import MultiThreadedDatasetBuilder
 
 """
-tfds build --overwrite --data_dir /mnt/arc/yygx/pkgs_baselines/openvla/datasets/
+tfds build --overwrite --data_dir /mnt/arc/yygx/pkgs_baselines/openvla/datasets/libero_44_split/
 """
 
 
