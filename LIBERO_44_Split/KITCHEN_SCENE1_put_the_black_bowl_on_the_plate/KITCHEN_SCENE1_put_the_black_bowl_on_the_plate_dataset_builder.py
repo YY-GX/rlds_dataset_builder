@@ -45,6 +45,8 @@ def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
         # assemble episode --> here we're assuming demos so we set reward to 1 at the end
         episode = []
         for i in range(actions.shape[0]):
+            print(f"joint_states[i]: {joint_states[i]}")
+            print(f"gripper_states[i]: {gripper_states[i]}")
             episode.append({
                 'observation': {
                     'image': images[i][::-1,::-1],
