@@ -49,7 +49,9 @@ def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
                 'observation': {
                     'image': images[i][::-1,::-1],
                     'wrist_image': wrist_images[i][::-1,::-1],
-                    'state': np.asarray(np.concatenate((states[i], gripper_states[i]), axis=-1), np.float32),
+                    # 'state': np.asarray(np.concatenate((states[i], gripper_states[i]), axis=-1), np.float32),
+                    # yy: this aligns with what we want in libero env eval
+                    'state': np.asarray(np.concatenate((joint_states[i], gripper_states[i]), axis=-1), np.float32),
                     'joint_state': np.asarray(joint_states[i], dtype=np.float32),
                 },
                 'action': np.asarray(actions[i], dtype=np.float32),
