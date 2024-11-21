@@ -45,14 +45,13 @@ def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
         # assemble episode --> here we're assuming demos so we set reward to 1 at the end
         episode = []
         for i in range(actions.shape[0]):
-            print(f"joint_states[i]: {joint_states[i]}")
-            print(f"gripper_states[i]: {gripper_states[i]}")
             episode.append({
                 'observation': {
                     'image': images[i][::-1,::-1],
                     'wrist_image': wrist_images[i][::-1,::-1],
-                    'state': np.asarray(np.concatenate((states[i], gripper_states[i]), axis=-1), np.float32),
-                    'gripper_states': np.asarray(gripper_states[i], dtype=np.float32),
+                    # 'state': np.asarray(np.concatenate((states[i], gripper_states[i]), axis=-1), np.float32),
+                    # yy: this aligns with what we want in libero env eval
+                    'state': np.asarray(np.concatenate((joint_states[i], gripper_states[i]), axis=-1), np.float32),
                     'joint_state': np.asarray(joint_states[i], dtype=np.float32),
                 },
                 'action': np.asarray(actions[i], dtype=np.float32),
@@ -121,7 +120,7 @@ class kitchenScene1PutTheBlackBowlOnThePlate(MultiThreadedDatasetBuilder):
                             doc='Wrist camera RGB observation.',
                         ),
                         'state': tfds.features.Tensor(
-                            shape=(8,),
+                            shape=(9,),
                             dtype=np.float32,
                             doc='Robot EEF state (6D pose, 2D gripper).',
                         ),
