@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/zsh
 
-PARENT_DIR="$(pwd)"
+PARENT_DIR="."
 TASKS=(
     "KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet"
     "KITCHEN_SCENE10_put_the_black_bowl_in_the_top_drawer_of_the_cabinet"
