@@ -1,6 +1,6 @@
-#!/bin/zsh
+#!/bin/bash
 
-PARENT_DIR="."
+PARENT_DIR="$(pwd)"
 TASKS=(
     "KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet"
     "KITCHEN_SCENE10_put_the_black_bowl_in_the_top_drawer_of_the_cabinet"
@@ -55,6 +55,7 @@ do
         echo "Building dataset for $TASK"
         cd "$TASK_DIR" || exit
         tfds build --overwrite --data_dir /mnt/arc/yygx/pkgs_baselines/openvla/datasets/libero_44_split/
+        cd "$PARENT_DIR" || exit
     else
         echo "Directory for $TASK not found!"
     fi
