@@ -49,7 +49,6 @@ TASKS=(
 )
 
 for TASK in "${TASKS[@]}"; do
-do
     TASK_DIR="$PARENT_DIR/$TASK"
     if [ -d "$TASK_DIR" ]; then
         echo "Building dataset for $TASK"
