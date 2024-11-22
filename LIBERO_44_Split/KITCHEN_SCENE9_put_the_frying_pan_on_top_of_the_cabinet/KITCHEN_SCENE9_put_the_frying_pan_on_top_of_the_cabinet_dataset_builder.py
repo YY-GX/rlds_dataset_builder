@@ -88,7 +88,7 @@ def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
             yield ret
 
 
-class kitchenScene9PutTheFryingPanOnTopOfTheCabinetDatasetBuilder(MultiThreadedDatasetBuilder):
+class kitchenScene9PutTheFryingPanOnTopOfTheCabinet(MultiThreadedDatasetBuilder):
     """DatasetBuilder for example dataset."""
 
     VERSION = tfds.core.Version('1.0.0')
