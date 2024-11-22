@@ -49,7 +49,7 @@ TASKS=(
 )
 
 echo "Parent directory contents:"
-ls "$PARENT_DIR"
+ls -l "$PARENT_DIR"
 
 for TASK in "${TASKS[@]}"; do
     TASK_DIR="$PARENT_DIR/$TASK"
@@ -61,7 +61,7 @@ for TASK in "${TASKS[@]}"; do
         tfds build --overwrite --data_dir /mnt/arc/yygx/pkgs_baselines/openvla/datasets/libero_44_split/
         cd .. || exit
     else
-        echo "Directory for $TASK not found!"
+        echo "Directory for $TASK not found! Expected location: $TASK_DIR"
     fi
 done
 
