@@ -48,7 +48,7 @@ TASKS=(
     "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate"
 )
 
-for TASK in "${TASKS[@]}"
+for TASK in "${TASKS[@]}"; do
 do
     TASK_DIR="$PARENT_DIR/$TASK"
     if [ -d "$TASK_DIR" ]; then
