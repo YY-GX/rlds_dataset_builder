@@ -48,8 +48,12 @@ TASKS=(
     "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate"
 )
 
+echo "Parent directory contents:"
+ls "$PARENT_DIR"
+
 for TASK in "${TASKS[@]}"; do
     TASK_DIR="$PARENT_DIR/$TASK"
+    echo "Checking directory: $TASK_DIR"
     if [ -d "$TASK_DIR" ]; then
         echo "Building dataset for $TASK"
         cd "$TASK_DIR" || exit
