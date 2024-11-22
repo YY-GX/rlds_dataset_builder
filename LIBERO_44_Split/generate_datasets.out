@@ -1,0 +1,204 @@
+Building dataset for KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet
+2024-11-21 21:44:09.678983: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-11-21 21:44:11.682939: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-11-21 21:44:12.987940: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2024-11-21 21:44:15.204540: W tensorflow/tsl/platform/cloud/google_auth_provider.cc:184] All attempts to get a Google authentication bearer token failed, returning an empty token. Retrieving token from files failed with "NOT_FOUND: Could not locate the credentials file.". Retrieving token from GCE failed with "FAILED_PRECONDITION: Error executing an HTTP request: libcurl code 6 meaning 'Couldn't resolve host name', error details: Could not resolve host: metadata.google.internal".
+INFO[build.py]: Loading dataset  from path: /mnt/arc/yygx/pkgs_baselines/rlds_dataset_builder/LIBERO_44_Split/KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet/KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_dataset_builder.py
+INFO[build.py]: download_and_prepare for dataset kitchen_scene10_close_the_top_drawer_of_the_cabinet/1.0.0...
+INFO[native_type_compatibility.py]: Using Any for unsupported type: typing.Sequence[~T]
+INFO[bigquery.py]: No module named google.cloud.bigquery_storage_v1. As a result, the ReadFromBigQuery transform *CANNOT* be used with `method=DIRECT_READ`.
+INFO[dataset_builder.py]: Generating dataset kitchen_scene10_close_the_top_drawer_of_the_cabinet (/mnt/arc/yygx/pkgs_baselines/openvla/datasets/libero_44_split/kitchen_scene10_close_the_top_drawer_of_the_cabinet/1.0.0)
+Downloading and preparing dataset Unknown size (download: Unknown size, generated: Unknown size, total: Unknown size) to /mnt/arc/yygx/pkgs_baselines/openvla/datasets/libero_44_split/kitchen_scene10_close_the_top_drawer_of_the_cabinet/1.0.0...
+Generating splits...:   0%|          | 0/1 [00:00<?, ? splits/s]Generating with 40 workers!
+
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A
+Generating train examples...: 0 examples [00:00, ? examples/s][A
+                                                              [A2024-11-21 21:44:18.649958: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:1330] could not retrieve CUDA device count: CUDA_ERROR_NOT_INITIALIZED: initialization error
+
+Generating train examples...: 4 examples [00:01,  3.46 examples/s][A
+Generating train examples...: 8 examples [00:02,  3.21 examples/s][A
+Generating train examples...: 12 examples [00:03,  3.16 examples/s][A
+Generating train examples...: 16 examples [00:05,  3.14 examples/s][A
+Generating train examples...: 21 examples [00:06,  3.57 examples/s][A
+Generating train examples...: 25 examples [00:07,  3.47 examples/s][A
+Generating train examples...: 29 examples [00:08,  3.33 examples/s][A
+Generating train examples...: 33 examples [00:10,  3.25 examples/s][A
+Generating train examples...: 37 examples [00:11,  3.27 examples/s][A
+Generating train examples...: 41 examples [00:12,  3.29 examples/s][A
+Generating train examples...: 45 examples [00:13,  3.28 examples/s][A
+Generating train examples...: 49 examples [00:14,  3.31 examples/s][A
+                                                                   [AProcessing chunk 1 of 1.
+Writing conversion results...
+Finishing split conversion...
+
+Shuffling /mnt/arc/yygx/pkgs_baselines/openvla/datasets/libero_44_split/kitchen_scene10_close_the_top_drawer_of_the_cabinet/1.0.0.incomplete5PYGOZ/kitchen_scene10_close_the_top_drawer_of_the_cabinet-train.tfrecord*...:   0%|          | 0/49 [00:00<?, ? examples/s][A
+Shuffling /mnt/arc/yygx/pkgs_baselines/openvla/datasets/libero_44_split/kitchen_scene10_close_the_top_drawer_of_the_cabinet/1.0.0.incomplete5PYGOZ/kitchen_scene10_close_the_top_drawer_of_the_cabinet-train.tfrecord*...:  69%|██████▉   | 34/49 [00:00<00:00, 336.93 examples/s][A
+                                                                                                                                                                                                                                                                                  [A                                                                Generating splits...:   0%|          | 0/1 [00:17<?, ? splits/s]Generating splits...: 100%|██████████| 1/1 [00:17<00:00, 17.16s/ splits]                                                                        INFO[writer.py]: Done writing /mnt/arc/yygx/pkgs_baselines/openvla/datasets/libero_44_split/kitchen_scene10_close_the_top_drawer_of_the_cabinet/1.0.0.incomplete5PYGOZ/kitchen_scene10_close_the_top_drawer_of_the_cabinet-train.tfrecord*. Number of examples: 49 (shards: [49])
+Dataset kitchen_scene10_close_the_top_drawer_of_the_cabinet downloaded and prepared to /mnt/arc/yygx/pkgs_baselines/openvla/datasets/libero_44_split/kitchen_scene10_close_the_top_drawer_of_the_cabinet/1.0.0. Subsequent calls will reuse this data.
+INFO[build.py]: Dataset generation complete...
+
+tfds.core.DatasetInfo(
+    name='kitchen_scene10_close_the_top_drawer_of_the_cabinet',
+    full_name='kitchen_scene10_close_the_top_drawer_of_the_cabinet/1.0.0',
+    description="""
+    TODO(example_dataset): Markdown description of your dataset.
+    Description is **formatted** as markdown.
+    
+    It should also contain any processing which has been applied (if any),
+    (e.g. corrupted example skipped, images cropped,...):
+    """,
+    homepage='https://www.tensorflow.org/datasets/catalog/kitchen_scene10_close_the_top_drawer_of_the_cabinet',
+    data_path='/mnt/arc/yygx/pkgs_baselines/openvla/datasets/libero_44_split/kitchen_scene10_close_the_top_drawer_of_the_cabinet/1.0.0',
+    file_format=tfrecord,
+    download_size=Unknown size,
+    dataset_size=119.70 MiB,
+    features=FeaturesDict({
+        'episode_metadata': FeaturesDict({
+            'file_path': Text(shape=(), dtype=string),
+        }),
+        'steps': Dataset({
+            'action': Tensor(shape=(7,), dtype=float32),
+            'discount': Scalar(shape=(), dtype=float32),
+            'is_first': Scalar(shape=(), dtype=bool),
+            'is_last': Scalar(shape=(), dtype=bool),
+            'is_terminal': Scalar(shape=(), dtype=bool),
+            'language_instruction': Text(shape=(), dtype=string),
+            'observation': FeaturesDict({
+                'image': Image(shape=(256, 256, 3), dtype=uint8),
+                'joint_state': Tensor(shape=(7,), dtype=float32),
+                'state': Tensor(shape=(9,), dtype=float32),
+                'wrist_image': Image(shape=(256, 256, 3), dtype=uint8),
+            }),
+            'reward': Scalar(shape=(), dtype=float32),
+        }),
+    }),
+    supervised_keys=None,
+    disable_shuffling=False,
+    splits={
+        'train': <SplitInfo num_examples=49, num_shards=1>,
+    },
+    citation="""// TODO(example_dataset): BibTeX citation""",
+)
+
+Directory for KITCHEN_SCENE10_put_the_black_bowl_in_the_top_drawer_of_the_cabinet not found!
+Directory for KITCHEN_SCENE1_open_the_bottom_drawer_of_the_cabinet not found!
+Directory for KITCHEN_SCENE1_open_the_top_drawer_of_the_cabinet not found!
+Directory for KITCHEN_SCENE1_put_the_black_bowl_on_the_plate not found!
+Directory for KITCHEN_SCENE1_put_the_black_bowl_on_top_of_the_cabinet not found!
+Directory for KITCHEN_SCENE2_open_the_top_drawer_of_the_cabinet not found!
+Directory for KITCHEN_SCENE2_put_the_black_bowl_at_the_back_on_the_plate not found!
+Directory for KITCHEN_SCENE2_put_the_black_bowl_at_the_front_on_the_plate not found!
+Directory for KITCHEN_SCENE2_put_the_middle_black_bowl_on_the_plate not found!
+Directory for KITCHEN_SCENE2_put_the_middle_black_bowl_on_top_of_the_cabinet not found!
+Directory for KITCHEN_SCENE2_stack_the_black_bowl_at_the_front_on_the_black_bowl_in_the_middle not found!
+Directory for KITCHEN_SCENE2_stack_the_middle_black_bowl_on_the_back_black_bowl not found!
+Directory for KITCHEN_SCENE3_put_the_frying_pan_on_the_stove not found!
+Directory for KITCHEN_SCENE3_put_the_moka_pot_on_the_stove not found!
+Directory for KITCHEN_SCENE3_turn_on_the_stove not found!
+Directory for KITCHEN_SCENE4_close_the_bottom_drawer_of_the_cabinet not found!
+Directory for KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet not found!
+Directory for KITCHEN_SCENE4_put_the_black_bowl_on_top_of_the_cabinet not found!
+Directory for KITCHEN_SCENE4_put_the_wine_bottle_in_the_bottom_drawer_of_the_cabinet not found!
+Directory for KITCHEN_SCENE4_put_the_wine_bottle_on_the_wine_rack not found!
+Directory for KITCHEN_SCENE5_close_the_top_drawer_of_the_cabinet not found!
+Directory for KITCHEN_SCENE5_put_the_black_bowl_in_the_top_drawer_of_the_cabinet not found!
+Directory for KITCHEN_SCENE5_put_the_black_bowl_on_the_plate not found!
+Directory for KITCHEN_SCENE5_put_the_black_bowl_on_top_of_the_cabinet not found!
+Directory for KITCHEN_SCENE5_put_the_ketchup_in_the_top_drawer_of_the_cabinet not found!
+Directory for KITCHEN_SCENE6_close_the_microwave not found!
+Directory for KITCHEN_SCENE7_open_the_microwave not found!
+Directory for KITCHEN_SCENE7_put_the_white_bowl_on_the_plate not found!
+Directory for KITCHEN_SCENE7_put_the_white_bowl_to_the_right_of_the_plate not found!
+Directory for KITCHEN_SCENE8_put_the_right_moka_pot_on_the_stove not found!
+Directory for KITCHEN_SCENE8_turn_off_the_stove not found!
+Directory for KITCHEN_SCENE9_put_the_frying_pan_on_the_cabinet_shelf not found!
+Directory for KITCHEN_SCENE9_put_the_frying_pan_on_top_of_the_cabinet not found!
+Directory for KITCHEN_SCENE9_put_the_frying_pan_under_the_cabinet_shelf not found!
+Directory for KITCHEN_SCENE9_put_the_white_bowl_on_top_of_the_cabinet not found!
+Directory for KITCHEN_SCENE9_turn_on_the_stove not found!
+Directory for LIVING_ROOM_SCENE5_put_the_red_mug_on_the_left_plate not found!
+Directory for LIVING_ROOM_SCENE5_put_the_red_mug_on_the_right_plate not found!
+Directory for LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate not found!
+Directory for LIVING_ROOM_SCENE6_put_the_chocolate_pudding_to_the_left_of_the_plate not found!
+Directory for LIVING_ROOM_SCENE6_put_the_chocolate_pudding_to_the_right_of_the_plate not found!
+Directory for LIVING_ROOM_SCENE6_put_the_red_mug_on_the_plate not found!
+Directory for LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate not found!
+All tasks processed.
