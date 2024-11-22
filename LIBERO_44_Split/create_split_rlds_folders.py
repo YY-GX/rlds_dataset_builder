@@ -82,7 +82,7 @@ def create_task_folder(task_name):
 
     # Modify the class name and the dataset path in the copied content
     class_name = camel_case(task_name)
-    content = content.replace(camel_case(EXISTING_TASKS[0]), class_name)
+    content = content.replace(camel_case(EXISTING_TASKS[0]), class_name.replace('DatasetBuilder', ''))
     content = content.replace(f"{EXISTING_TASKS[0]}_demo.hdf5", f"{task_name}_demo.hdf5")
 
     # Write the modified content to the new dataset_builder.py file
