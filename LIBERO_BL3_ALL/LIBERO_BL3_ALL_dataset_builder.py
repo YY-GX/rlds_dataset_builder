@@ -123,7 +123,7 @@ class LiberoBl3All(MultiThreadedDatasetBuilder):
                             doc='Wrist camera RGB observation.',
                         ),
                         'state': tfds.features.Tensor(
-                            shape=(8,),
+                            shape=(9,),
                             dtype=np.float32,
                             doc='Robot EEF state (6D pose, 2D gripper).',
                         ),
