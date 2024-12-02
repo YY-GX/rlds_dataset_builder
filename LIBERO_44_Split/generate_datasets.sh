@@ -66,3 +66,6 @@ for TASK in "${TASKS[@]}"; do
 done
 
 echo "All tasks processed."
+
+
+."
