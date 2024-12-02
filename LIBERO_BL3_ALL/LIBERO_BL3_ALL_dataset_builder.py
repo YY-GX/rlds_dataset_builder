@@ -34,10 +34,13 @@ def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
         # compute language instruction
         raw_file_string = os.path.basename(episode_path).split('/')[-1]
         words = raw_file_string[:-10].split("_")
+        is_integer = lambda s: s.isdigit()
         command = ''
         for w in words:
             if "SCENE" in w:
                 command = ''
+                continue
+            if is_integer(w):
                 continue
             command = command + w + ' '
         command = command[:-1]
