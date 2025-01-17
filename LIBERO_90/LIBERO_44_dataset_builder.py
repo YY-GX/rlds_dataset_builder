@@ -7,8 +7,7 @@ import numpy as np
 import tensorflow as tf
 import tensorflow_datasets as tfds
 import sys
-# from LIBERO_10.conversion_utils import MultiThreadedDatasetBuilder
-from conversion_utils import MultiThreadedDatasetBuilder
+from LIBERO_10.conversion_utils import MultiThreadedDatasetBuilder
 
 """
 tfds build --overwrite --data_dir /mnt/arc/yygx/pkgs_baselines/openvla/datasets/
@@ -35,13 +34,10 @@ def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
         # compute language instruction
         raw_file_string = os.path.basename(episode_path).split('/')[-1]
         words = raw_file_string[:-10].split("_")
-        is_integer = lambda s: s.isdigit()
         command = ''
         for w in words:
             if "SCENE" in w:
                 command = ''
-                continue
-            if is_integer(w):
                 continue
             command = command + w + ' '
         command = command[:-1]
@@ -53,9 +49,7 @@ def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
                 'observation': {
                     'image': images[i][::-1,::-1],
                     'wrist_image': wrist_images[i][::-1,::-1],
-                    # 'state': np.asarray(np.concatenate((states[i], gripper_states[i]), axis=-1), np.float32),
-                    # yy: this aligns with what we want in libero env eval
-                    'state': np.asarray(np.concatenate((joint_states[i], gripper_states[i]), axis=-1), np.float32),
+                    'state': np.asarray(np.concatenate((states[i], gripper_states[i]), axis=-1), np.float32),
                     'joint_state': np.asarray(joint_states[i], dtype=np.float32),
                 },
                 'action': np.asarray(actions[i], dtype=np.float32),
@@ -92,7 +86,7 @@ def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
             yield ret
 
 
-class LiberoBl3All(MultiThreadedDatasetBuilder):
+class Libero44(MultiThreadedDatasetBuilder):
     """DatasetBuilder for example dataset."""
 
     VERSION = tfds.core.Version('1.0.0')
@@ -124,7 +118,7 @@ class LiberoBl3All(MultiThreadedDatasetBuilder):
                             doc='Wrist camera RGB observation.',
                         ),
                         'state': tfds.features.Tensor(
-                            shape=(9,),
+                            shape=(8,),
                             dtype=np.float32,
                             doc='Robot EEF state (6D pose, 2D gripper).',
                         ),
@@ -174,6 +168,5 @@ class LiberoBl3All(MultiThreadedDatasetBuilder):
         """Define filepaths for data splits."""
         return {
             # "train": glob.glob("/PATH/TO/LIBERO/libero/datasets/libero_10_no_noops/*.hdf5"),
-            # "train": glob.glob("/mnt/arc/yygx/pkgs_baselines/LIBERO/libero/datasets/libero_90_openvla_no_noops/*.hdf5"),
-            "train": glob.glob("/mnt/arc/yygx/pkgs_baselines/LIBERO/libero/datasets/bl3_all_openvla_no_noops_delete_empty_demo/*.hdf5")
+            "train": glob.glob("/mnt/arc/yygx/pkgs_baselines/LIBERO/libero/datasets/libero_90_openvla_no_noops/*.hdf5"),
         }
