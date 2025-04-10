@@ -15,7 +15,7 @@ tfds build --overwrite --data_dir /mnt/arc/yygx/pkgs_baselines/openvla-oft/datas
 
 group_splits = {
     "Local1": [2, 3, 4, 5, 9],
-    "Local2": [7, 11, 13, 20, 24]
+    "Local2": [7, 11, 13, 20, 24, 26, 27, 30, 37, 39]
 
 }
 
