@@ -8,21 +8,19 @@ import tensorflow as tf
 import tensorflow_datasets as tfds
 import sys
 from LIBERO_10.conversion_utils import MultiThreadedDatasetBuilder
+from libero.libero.benchmark.boss_task_map import boss_task_map
 
 """
-tfds build --overwrite --data_dir /mnt/arc/yygx/pkgs_baselines/openvla-oft/datasets/
+tfds build --overwrite --data_dir /mnt/arc/yygx/pkgs_baselines/openvla-oft/datasets/rlds_datasets
 """
 
 group_splits = {
-    "Local1": [2, 3, 4, 5, 9],
-    "Local2": [7, 11, 13, 20, 24, 26, 27, 30, 37, 39]
+    "Local2": [6, 7, 10, 15, 17, 18, 19, 20, 23, 39]
 
 }
 
-
-bddl_folder = "/mnt/arc/yygx/pkgs_baselines/LIBERO/libero/libero/bddl_files/libero_90/*.bddl"
-# TODO: check whether I shall use pre 3
-demos_file = np.array([os.path.join("/mnt/arc/yygx/pkgs_baselines/LIBERO/libero/datasets/local_demos_libero_90_openvla_no_noops_pre_3", bddl_file.split('/')[-1].split('.')[0] + "_demo.hdf5") for bddl_file in sorted(glob.glob(bddl_folder))])
+demos_file = np.array([os.path.join("/mnt/arc/yygx/pkgs_baselines/LIBERO/libero/datasets/hdf5_datasets/local_demos_libero_90_openvla_no_noops_pre_3", bddl_name + "_demo.hdf5")
+                       for bddl_name in boss_task_map['boss_44']])
 demos_file = list(demos_file[group_splits['Local2']])
 
 def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
