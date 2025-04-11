@@ -8,7 +8,7 @@ import tensorflow as tf
 import tensorflow_datasets as tfds
 import sys
 from LIBERO_10.conversion_utils import MultiThreadedDatasetBuilder
-from libero.libero.benchmark.boss_task_map import boss_task_map
+from boss_task_map import boss_task_map
 
 """
 tfds build --overwrite --data_dir /mnt/arc/yygx/pkgs_baselines/openvla-oft/datasets/rlds_datasets
