@@ -15,7 +15,7 @@ tfds build --overwrite --data_dir /mnt/arc/yygx/pkgs_baselines/openvla-oft/datas
 """
 
 group_splits = {
-    "Local2": [6, 7, 10, 15, 17, 18, 19, 20, 23, 39]
+    "Local2": [7, 10, 15, 16, 17, 18, 19, 20, 23, 39]
 
 }
 
@@ -178,3 +178,4 @@ class LiberoLocal2(MultiThreadedDatasetBuilder):
         return {
             "train": demos_file,
         }
+
