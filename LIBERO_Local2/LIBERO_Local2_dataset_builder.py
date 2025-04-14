@@ -19,7 +19,7 @@ group_splits = {
 
 }
 
-demos_file = np.array([os.path.join("/mnt/arc/yygx/pkgs_baselines/LIBERO/libero/datasets/hdf5_datasets/local_demos_libero_90_openvla_no_noops_pre_3", bddl_name + "_demo.hdf5")
+demos_file = np.array([os.path.join("/mnt/arc/yygx/pkgs_baselines/openvla-oft/datasets/hdf5_datasets/local_demos_libero_90_openvla_no_noops_pre_3", bddl_name + "_demo.hdf5")
                        for bddl_name in boss_task_map['boss_44']])
 demos_file = list(demos_file[group_splits['Local2']])
 
