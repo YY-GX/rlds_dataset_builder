@@ -17,7 +17,7 @@ tfds build --overwrite --data_dir /mnt/arc/yygx/pkgs_baselines/openvla-oft/datas
 group_splits = {
     "Local2": [7, 10, 15, 16, 17, 18, 19, 20, 23, 39],
     "Local3": [5, 24, 25, 29, 30, 32, 33, 37, 41, 43],
-    "Libero44Local": [range(0, 44)],
+    "Libero44Local": list(range(0, 44)),
 }
 
 demos_file = np.array([os.path.join("/mnt/arc/yygx/pkgs_baselines/openvla-oft/datasets/hdf5_datasets/local_demos_libero_90_openvla_no_noops_pre_init_8_pre_demo_8", bddl_name + "_demo.hdf5")
