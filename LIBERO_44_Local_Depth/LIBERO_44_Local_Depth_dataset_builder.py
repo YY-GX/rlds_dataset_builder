@@ -18,11 +18,12 @@ group_splits = {
     "Local2": [7, 10, 15, 16, 17, 18, 19, 20, 23, 39],
     "Local3": [5, 24, 25, 29, 30, 32, 33, 37, 41, 43],
     "Libero44Local": list(range(0, 44)),
+    "Libero44LocalDepth": list(range(0, 44)),
 }
 
-demos_file = np.array([os.path.join("/mnt/arc/yygx/pkgs_baselines/openvla-oft/datasets/hdf5_datasets/local_demos_libero_90_openvla_no_noops_pre_init_3_pre_demo_8", bddl_name + "_demo.hdf5")
+demos_file = np.array([os.path.join("/mnt/arc/yygx/pkgs_baselines/openvla-oft/datasets/hdf5_datasets/local_demos_libero_90_openvla_no_noops_pre_init_3_pre_demo_8_depth", bddl_name + "_demo.hdf5")
                        for bddl_name in boss_task_map['boss_44']])
-demos_file = list(demos_file[group_splits['Libero44Local']])
+demos_file = list(demos_file[group_splits['Libero44LocalDepth']])
 
 def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
     """Yields episodes for list of data paths."""
@@ -96,7 +97,7 @@ def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
             yield ret
 
 
-class Libero44Local(MultiThreadedDatasetBuilder):
+class Libero44LocalDepth(MultiThreadedDatasetBuilder):
     """DatasetBuilder for example dataset."""
 
     VERSION = tfds.core.Version('1.0.0')
