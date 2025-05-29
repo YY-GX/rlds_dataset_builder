@@ -57,10 +57,11 @@ def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
         # assemble episode --> here we're assuming demos so we set reward to 1 at the end
         episode = []
         for i in range(actions.shape[0]):
+            assert images[i].shape == (256, 256, 3), f"Unexpected image shape: {images[i].shape}"
             episode.append({
                 'observation': {
-                    'image': images[i][::-1,::-1],
-                    'wrist_image': wrist_images[i][::-1,::-1],
+                    'image': images[i][::-1,::-1].astype(np.uint8),
+                    'wrist_image': wrist_images[i][::-1,::-1].astype(np.uint8),
                     'state': np.asarray(np.concatenate((states[i], gripper_states[i]), axis=-1), np.float32),
                     'joint_state': np.asarray(joint_states[i], dtype=np.float32),
                 },
